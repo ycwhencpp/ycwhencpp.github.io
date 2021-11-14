@@ -1,5 +1,4 @@
 var COLOURS = ["#9cd7ff", "#d4ffdc", "#FFEBCD", "#ffb2a8", "#cff6ff", "#FFFFFF", "#E0E0E0"];
-//var COLOURS = ['#003049', '#ffd166', '#06d6a0', '#c9ada7', '#d62828', '#577399', '#495867'];
 var radius = 0;
 var randomColor = 0;
 
@@ -13,7 +12,7 @@ const navItem1 = menu.querySelector(".nav-item1");
 const navItem2 = menu.querySelector(".nav-item2");
 const navItem3 = menu.querySelector(".nav-item3");
 const navItem4 = menu.querySelector(".nav-item4");
-const navItem5 = menu.querySelector(".nav-item5");
+// const navItem5 = menu.querySelector(".nav-item5");
 btn.addEventListener("click", (evt) => {
   menu.classList.toggle("active");
   colourChange();
@@ -31,10 +30,10 @@ navItem3.addEventListener("click", (evt) => {
   colourChange();
 });
 
-// navItem4.addEventListener('click', evt => {
-// 	menu.classList.toggle('active');
-// 	colourChange();
-// });
+navItem4.addEventListener("click", (evt) => {
+  menu.classList.toggle("active");
+  colourChange();
+});
 // navItem5.addEventListener('click', evt => {
 // 	menu.classList.toggle('active');
 // 	colourChange();
@@ -142,84 +141,84 @@ $(document).ready(function ($) {
   });
 });
 
-// Wrap every letter in a span
-var textWrapper = document.querySelector(".ml12");
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// // Wrap every letter in a span
+// var textWrapper = document.querySelector(".ml12");
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime
-  .timeline({ loop: true })
-  .add({
-    targets: ".ml12 .letter",
-    translateX: [40, 0],
-    translateZ: 0,
-    opacity: [0, 1],
-    easing: "easeOutExpo",
-    duration: 1200,
-    delay: (el, i) => 500 + 30 * i,
-  })
-  .add({
-    targets: ".ml12 .letter",
-    translateX: [0, -30],
-    opacity: [1, 0],
-    easing: "easeInExpo",
-    duration: 1100,
-    delay: (el, i) => 100 + 30 * i,
-  });
+// anime
+//   .timeline({ loop: true })
+//   .add({
+//     targets: ".ml12 .letter",
+//     translateX: [40, 0],
+//     translateZ: 0,
+//     opacity: [0, 1],
+//     easing: "easeOutExpo",
+//     duration: 1200,
+//     delay: (el, i) => 500 + 30 * i,
+//   })
+//   .add({
+//     targets: ".ml12 .letter",
+//     translateX: [0, -30],
+//     opacity: [1, 0],
+//     easing: "easeInExpo",
+//     duration: 1100,
+//     delay: (el, i) => 100 + 30 * i,
+// });
 
-// Flipping Animation
+// // Flipping Animation
 
-(function () {
-  var word = ["Android Developer 📱", "UI Designer", "Front-end Developer", "Video Editor", "UX Designer"];
-  var element = document.getElementsByClassName("flipText")[0];
-  var wordIndex = 1;
+// (function () {
+//   var word = ["Web Developer", "FullStack Developer", "Photographer"];
+//   var element = document.getElementsByClassName("flipText")[0];
+//   var wordIndex = 1;
 
-  var resetAnimation = function () {
-    element.classList.remove("flip");
-  };
+//   var resetAnimation = function () {
+//     element.classList.remove("flip");
+//   };
 
-  setInterval(function () {
-    switch (wordIndex) {
-      case 0:
-        element.classList.add("flip");
-        element.textContent = word[wordIndex];
-        wordIndex = 1;
-        setTimeout(resetAnimation, 1000);
-        break;
+//   setInterval(function () {
+//     switch (wordIndex) {
+//       case 0:
+//         element.classList.add("flip");
+//         element.textContent = word[wordIndex];
+//         wordIndex = 1;
+//         setTimeout(resetAnimation, 1000);
+//         break;
 
-      case 1:
-        element.classList.add("flip");
-        element.textContent = word[wordIndex];
-        wordIndex = 2;
-        setTimeout(resetAnimation, 1000);
-        break;
+//       case 1:
+//         element.classList.add("flip");
+//         element.textContent = word[wordIndex];
+//         wordIndex = 2;
+//         setTimeout(resetAnimation, 1000);
+//         break;
 
-      case 2:
-        element.classList.add("flip");
-        element.textContent = word[wordIndex];
-        wordIndex = 3;
-        setTimeout(resetAnimation, 1000);
-        break;
+//       case 2:
+//         element.classList.add("flip");
+//         element.textContent = word[wordIndex];
+//         wordIndex = 3;
+//         setTimeout(resetAnimation, 1000);
+//         break;
 
-      case 3:
-        element.classList.add("flip");
-        element.textContent = word[wordIndex];
-        wordIndex = 4;
-        setTimeout(resetAnimation, 1000);
-        break;
+//       case 3:
+//         element.classList.add("flip");
+//         element.textContent = word[wordIndex];
+//         wordIndex = 4;
+//         setTimeout(resetAnimation, 1000);
+//         break;
 
-      case 4:
-        element.classList.add("flip");
-        element.textContent = word[wordIndex];
-        wordIndex = 0;
-        setTimeout(resetAnimation, 1000);
-        break;
+//       case 4:
+//         element.classList.add("flip");
+//         element.textContent = word[wordIndex];
+//         wordIndex = 0;
+//         setTimeout(resetAnimation, 1000);
+//         break;
 
-      // case 5:
-      // 	element.classList.add('flip');
-      // 	element.textContent = word[wordIndex];
-      // 	wordIndex = 0;
-      // 	setTimeout(resetAnimation, 1000);
-      // 	break;
-    }
-  }, 2000);
-})();
+//       // case 5:
+//       // 	element.classList.add('flip');
+//       // 	element.textContent = word[wordIndex];
+//       // 	wordIndex = 0;
+//       // 	setTimeout(resetAnimation, 1000);
+//       // 	break;
+//     }
+//   }, 2000);
+// })();
