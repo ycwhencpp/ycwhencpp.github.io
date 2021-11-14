@@ -1,12 +1,532 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en-US">
+
 <head>
+	<!-- Your Website Title -->
+	<title>Portfolio</title>
+	<!-- Your Website Description -->
+	<meta name="description"
+		content="Anurag Choudhary is an FullStack Developer. He is pursuing his Bachelors in Electrical and Communication Engineering from NIET College. " />
+	<meta name="author" content="Anurag Choudhary">
+
+	<!-- Meta Tags for Responsiveness -->
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Folio</title>
-</head>
-<body>
+
+	<!-- Social Media Meta Tags -->
+	<meta property="og:url" content="https://anuragchoudhary.codes/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Anurag Choudhary | anuragchoudhary.codes/" />
+	<meta property="og:description"
+		content="Anurag Choudhary is an FullStack Developer. He is pursuing his Bachelors in Electrical and Communication Engineering from NIET College. " />
+	<meta property="og:image" content="img/logo.png" />
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/logo.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144"
+		href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i" rel="stylesheet">
+
+	<!-- Bootstrap & Other CSS Files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+		integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+
+	<!-- Project CSS File -->
+	<link rel="stylesheet" href="style.css" type="text/css">
 	
+	<!-- Font Awesome -->
+	
+	<script src="https://kit.fontawesome.com/400db8db7c.js" crossorigin="anonymous"></script>
+</head>
+
+<body onclick="colourChange()">
+	<!-- Page Wrapper -->
+	<div class="page-wrapper">
+		<!-- Header -->
+		<header>
+			<div class="logo animate">
+				<a href="https://anuragchoudhary.codes/">
+					<img class="img-responsive" width="100%" height="100%" src="img/logo.png" alt="anurag">
+				</a>
+			</div>
+		</header>
+
+		<!-- Content Wrapper -->
+		<div class="content-wrapper">
+			<div class="content-main animate">
+				<div class="container">
+					<h1 class="page-title">Hey, I'm Anurag!</h1>
+					<div class="wrapper-text">
+							<!-- <h3 >I'm -->
+							<h3>
+								<span
+									class="txt-rotate"
+									data-period="2000"
+									data-rotate='[ "Web Developer.", "FullStack Developer.",  "Photographer."]'>
+								</span>
+							</h3>
+							<!-- </h3> -->
+						<!-- <p class="flipText">Android Developer 👨‍💻</p> -->
+					</div>
+				</div>
+			</div>
+			<!-- Background Wrapper -->
+			<div class="background-wrapper">
+				<div id="background-content"></div>
+			</div>
+		</div>
+
+		<!-- Menu -->
+		<div class="menu">
+			<button class="nav-tgl" type="button" aria-label="toggle menu">
+				<span aria-hidden="true"></span>
+			</button>
+			<div class="nav">
+				<div class="header">
+				</div>
+				<div class="nav-content">
+					<a href="" data-toggle="modal" data-target="#modal-about" class="nav-item1">
+						<h1 class="nav-link">About</h1>
+					</a>
+
+					<a href="" data-toggle="modal" data-target="#modal-projects" class="nav-item2">
+						<h1 class="nav-link">Projects</h1>
+					</a>
+
+					<a href="" data-toggle="modal" data-target="#modal-certifications" class="nav-item4">
+						<h1 class="nav-link">Certifications</h1>
+					</a>
+					<a href="" data-toggle="modal" data-target="#modal-connect" class="nav-item3">
+						<h1 class="nav-link">Contact</h1>
+					</a>
+				</div>
+				<div class="footer">
+					<div class="social-icons animate">
+						<a href="https://twitter.com/ycwhencpp" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a href="https://github.com/ycwhencpp" target="_blank"><i class="fa fa-github"></i></a>
+						<a href="https://www.linkedin.com/in/saketlakhotia17/" target="_blank"><i class="fa fa-linkedin"></i></a>
+						<a href="mailto:anurag.jay1002@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			<div class="social-icons animate">
+                <a href="https://twitter.com/ycwhencpp" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/ycwhencpp" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anurag-chaudhary-4576191a0/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="mailto:anurag.jay1002@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+			</div>
+		</footer>
+	</div>
+
+	<!-- About Modal -->
+	<div class="modal fade" id="modal-about" tabindex="-1" role="dialog" aria-labelledby="modal-about-label">
+		<div class="modal-dialog" role="document">
+			<div class="container">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h2 class="modal-title" id="modal-about-label">About</h2>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<!-- Left Col for Introduction -->
+							<div class="col-md-3" style="overflow: hidden; ">
+								<div class="person">
+									<div class="image">
+										<img class="img-responsive" src="img/anurag.jpg" alt="Anurag">
+									</div>
+									<h4>Anurag Choudhary</h4>
+									<h5>Live a life you will remember🚀</h5>
+									<h5><a href="mailto:anurag.jay1002@gmail.com" target="_blank">anurag.jay1002@gmail.com</a></h5>
+									<h5><i class="fa fa-map-marker"></i><span style="padding-left: 8px;">Delhi, India</span></h5>
+									<div class="social-icons" style="margin-left: -0.3125rem;">
+                                        <a href="https://twitter.com/ycwhencpp" target="_blank"><i 
+                                            class="fa fa-twitter"></i></a>
+                                        <a href="https://github.com/ycwhencpp" target="_blank"><i 
+                                            class="fa fa-github"></i></a>
+                                        <a href="https://www.linkedin.com/in/anurag-chaudhary-4576191a0/" target="_blank"><i 
+                                            class="fa fa-linkedin"></i></a>
+                                        <a href="mailto:anurag.jay1002@gmail.com" target="_blank"><i 
+                                            class="fas fa-envelope"></i></a>
+									</div>
+									<br>
+									<h4><strong>Skills</strong></h4>
+									<hr style="border-top: 1px solid black;" />
+									<div class="social-icons-tech" style="margin-left: -0.3125rem;">
+										<i class="devicon-html5-plain colored"></i>
+										<i class="devicon-css3-plain colored"></i>
+										<i class="devicon-javascript-plain colored"></i>
+										<i class="devicon-react-plain colored"></i>
+										<i class="devicon-django-plain colored"></i>
+										<br>
+										<i class="devicon-c-plain"></i>
+										<i class="devicon-mysql-plain colored"></i>
+										<i class="devicon-git-plain colored"></i>
+										<i class="devicon-bootstrap-plain colored"></i>
+										<i class="devicon-python-plain colored"></i>
+									</div>
+									<hr style="border-top: 1px solid black;" />
+
+								</div>
+							</div>
+
+							<!-- Right Col for Description -->
+							<div class="col-md-9">
+								<section>
+									<p>
+										Hello World! My name is Anurag Choudahry. I am a 3rd year
+										Student in Electronics and Communications Engineering from
+										NIET College.
+										
+									</p>
+									
+									<p> 
+										Apart from this I am a Tech enthusiast ,self taught programmer and love to be a part of the
+										community.I always tries to get along with new Technologies
+										My hobbies and interests are Gaming,Travelling,Photography <br><br>
+
+										🔭 I’m currently working on Making an Social Networking Web App <br><br>
+
+										🌱 I’m currently learning React <br><br>
+
+										<!-- 💬 Ask me about GCP, ML, Android Studio, AI<br><br> -->
+
+										📫 How to reach me anurag.jay1002@gmail.com<br><br>
+
+										⚡ Fun fact It's All Just Electrons<br>
+										
+									</p>
+								
+								</section>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Projects Modal -->
+	<div class="modal fade" id="modal-projects" tabindex="-1" role="dialog" aria-labelledby="modal-projects-label">
+		<div class="modal-dialog" role="document">
+			<div class="container">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h2 class="modal-title" id="modal-projects-label">Projects</h2>
+					</div>
+					<div class="modal-body">
+						<!-- Project Category 1 -->
+						<div style="margin-bottom: 1.875rem;">
+							<h3>Full-Stack Development</h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4">
+								<div class="auction card">
+									<div class="wrapper">
+										<div class="data">
+											<div class="content">
+												<span class="type">personal Project</span>
+												<h3 class="title"><a target="blank" href="https://nilaamkar.herokuapp.com/">Nillamkar</a></h3>
+												<i class="icon"></i>
+												<p class="text">Created an <b>E-commerce</b> website that allows users to post listings
+                                                    ,bid on them ,comment on them and close that listing if they are author.It's something 
+                                                    like a clone of E-bay but designed in very own way.<br>
+													<a href="https://github.com/ycwhencpp/nilaamkar"><b>Github Repo:</b>👈</a>
+                                                </p>
+
+												<label for="show-menu" class="menu-button"><a target="_blank"
+														href="https://nilaamkar.herokuapp.com/"><i
+															class="fa fa-chain"></i></a></label>
+											</div>
+											<input type="checkbox" id="show-menu" />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4 col-sm-4">
+								<div class="coware card">
+									<div class="wrapper">
+										<div class="data">
+											<div class="content">
+												<span class="type">Personal project</span>
+												<h3 class="title"><a target="_blank" href="https://coware.herokuapp.com/">
+												Coware</a></h3>
+												<i class="icon"></i>
+												<p class="text">
+                                                    It's a covid website that shows information about <b>Covid-Cases</b>,<b>Vaccination Details</b> <br>
+                                                    and news about covid and vaccination with live charts so that users can interact with data way easily.<br>
+													<a href="https://github.com/ycwhencpp/coware"><b>Github Repo:</b>👈</a>
+													</p>
+
+												<label for="show-menu" class="menu-button"><a target="_blank"
+														href="https://coware.herokuapp.com/"><i
+															class="fa fa-chain"></i></a></label>
+											</div>
+											<input type="checkbox" id="show-menu" />
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+							<div style="margin-bottom: 1.875rem;">
+							<h3>Frontend-Devlopement</h3>
+							<p></p>
+							</div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="rasturaant card">
+                                        <div class="wrapper">
+                                            <div class="data">
+                                                <div class="content">
+                                                    <span class="type">Personal project</span>
+                                                    <h3 class="title"><a target="_blank" href="https://rasturaant.netlify.app/">
+                                                    Rasturaant</a></h3>
+                                                    <i class="icon"></i>
+                                                    <p class="text">
+                                                        Rasturaant is a <b>Static website</b> displaying info about your small food business 
+														with a very clean and interactive UI and UX. <br>
+														<a href="https://github.com/ycwhencpp/rasturaant"><b>Github Repo:</b>👈</a>
+                                                        </p>
+    
+                                                    <label for="show-menu" class="menu-button"><a target="_blank"
+                                                            href="https://rasturaant.netlify.app/"><i
+                                                                class="fa fa-chain"></i></a></label>
+                                                </div>
+                                                <input type="checkbox" id="show-menu" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="foodzey card">
+											<div class="wrapper">
+												<div class="data">
+													<div class="content">
+														<span class="type">Personal project</span>
+														<h3 class="title"><a target="_blank" href="https://foodzey.netlify.app">
+														Foodzey</a></h3>
+														<i class="icon"></i>
+														<p class="text">
+															Its just a single page website with a very <b>interactive UI</b>,
+															and for rest you have to check the website. <br>
+															<a href="https://github.com/ycwhencpp/foodzey"><b>Github Repo:</b>👈</a>
+															</p>	
+		
+														<label for="show-menu" class="menu-button"><a target="_blank"
+																href="https://foodzey.netlify.app"><i
+																	class="fa fa-chain"></i></a></label>
+													</div>
+													<input type="checkbox" id="show-menu" />
+												</div>
+											</div>
+                                    </div>
+                                </div>
+                            </div>
+							<h3>Looking for more? These are just a very select few of my many projects on
+							<a href="https://github.com/ycwhencpp/"><b>GitHub</b></a>!
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- Certifications -->
+	<div class="modal fade" id="modal-certifications" tabindex="-1" role="dialog" aria-labelledby="modal-projects-label">
+		<div class="modal-dialog" role="document">
+			<div class="container">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h2 class="modal-title" id="modal-projects-label">Certifications</h2>
+					</div>
+					<div class="modal-body">
+						<!-- Project Category 1 -->
+						<div style="margin-bottom: 1.875rem;">
+							<h3>Coming Soon...</h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4">
+								<div class="vision-x card">
+									<div class="wrapper">
+										<div class="data">
+											<div class="content">
+												<span class="type"> </span>
+												<h3 class="title"><a target="blank" href="https://www.linkedin.com/in/anurag-chaudhary-4576191a0/">Certificates
+														</a></h3>
+												<i class="icon"></i>
+												<p class="text">
+
+												<label for="show-menu" class="menu-button"><a target="_blank"
+														href="https://www.linkedin.com/in/anurag-chaudhary-4576191a0/"><i
+															class="fa fa-chain"></i></a></label>
+											</div>
+											<input type="checkbox" id="show-menu" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Clients -->
+	<!-- <div class="modal fade" id="modal-clients" tabindex="-1" role="dialog" aria-labelledby="modal-projects-label">
+		<div class="modal-dialog" role="document">
+			<div class="container">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h2 class="modal-title" id="modal-projects-label">Clients</h2>
+					</div>
+					<div class="modal-body"> -->
+						<!-- Project Category 1 -->
+						<!-- <div style="margin-bottom: 1.875rem;">
+							<h3>Coming Soon....</h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4">
+								<div class="vision-x card">
+									<div class="wrapper">
+										<div class="data">
+											<div class="content">
+												<span class="type"> </span>
+												<h3 class="title"><a target="blank" href="https://www.linkedin.com/in/anurag-chaudhary-4576191a0/">
+														URCCS</a></h3>
+												<i class="icon"></i>
+												<p class="text"> </p>
+
+												<label for="show-menu" class="menu-button"><a target="_blank"
+														href="https://www.linkedin.com/in/anurag-chaudhary-4576191a0/"><i
+															class="fa fa-chain"></i></a></label>
+											</div>
+											<input type="checkbox" id="show-menu" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+
+
+	<!-- Contact -->
+	<div class="modal fade" id="modal-connect" tabindex="-1" role="dialog" aria-labelledby="modal-projects-label">
+		<div class="modal-dialog" role="document">
+			<div class="container">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h2 class="modal-title" id="modal-connect-label" style="text-align: center;">Contact</h2>
+					</div>
+					<div class="modal-body contact-center">
+						<div class="row">
+							<div class="contact" id="contact">
+								<div class="contact-form">
+									<h3>Send Message</h3>
+									<form action="https://formspree.io/f/xjvjpbak" method="POST">
+										<div class="input-box">
+											<input type="text" placeholder="Name" required name="user_name" autofocus autocomplete="off">
+										</div>
+										<div class="input-box">
+											<input type="email" placeholder="Email" required  autocomplete="off" name="_replyto">
+										</div>
+										<div class="input-box">
+											<textarea name="message" required  placeholder="Message"></textarea>
+										</div>
+										<div class="input-box">
+											<input type="submit" value="Send">
+										</div>
+									</form>
+								</div>
+							</div>
+							<div  style="text-align: center;">
+								<div class="social-icons animate" style="
+								padding: .3125rem .625rem;
+								display: inline-block;
+								font-size: 1.125rem;">
+									<a href="https://twitter.com/ycwhencpp" target="_blank"><i
+										class="fa fa-twitter"></i></a>
+									<a href="https://github.com/ycwhencpp" target="_blank"><i
+										class="fa fa-github"></i></a>
+									<a href="https://www.linkedin.com/in/anurag-chaudhary-4576191a0/" target="_blank"><i
+										class="fa fa-linkedin"></i></a></a>
+									<a href="mailto:anurag.jay1002@gmail.com" target="_blank"><i
+											class="fas fa-envelope"></i></a>
+								</div>
+							</div>
+							<div class="col-md-4"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Bootstrap Scripts -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+		integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+		integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<!-- Sketch.js -->
+	<script src="   sketch.min.js"></script>
+	
+	<!-- Project JS File -->
+	<script src="script.js"></script>
+
 </body>
+
 </html>
