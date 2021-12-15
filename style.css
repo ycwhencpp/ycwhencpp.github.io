@@ -408,6 +408,10 @@ footer .social-icons a:hover {
 	background: url("../img/coware.png") no-repeat;
 	background-size: contain;
 }
+.pipeout .wrapper {
+	background: url("../img/pipeout.png") no-repeat;
+	background-size: contain;
+}
 
 .auction .wrapper {
 	background: url("../img/auction.png") no-repeat;
