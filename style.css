@@ -412,8 +412,11 @@ footer .social-icons a:hover {
 	background: url("../img/pipeout.png") no-repeat;
 	background-size: contain;
 }
-
-.auction .wrapper {
+.promptopia .wrapper {
+	background: url("../img/promptopia.png") no-repeat;
+	background-size: contain;
+}
+.auction .wrapper {	
 	background: url("../img/auction.png") no-repeat;
 	background-size: contain;
 }
